@@ -5,7 +5,10 @@ import time
 from collections import deque
 
 # Connect to Arduino (adjust COM port if needed)
-arduino = serial.Serial('COM3', 9600)
+SERIAL_PORT = 'COM3'
+BAUD_RATE = 9600
+
+arduino = serial.Serial(SERIAL_PORT, BAUD_RATE)
 time.sleep(2)
 
 def ard():
