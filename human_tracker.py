@@ -41,7 +41,7 @@ def ard():
         if not ret:
             print("Error: Unable to capture frame.")
             break
-            #continue
+    
 
         results = model(frame)
         detections = results.xyxy[0]
@@ -78,7 +78,7 @@ def ard():
             if abs(temp_y) > 5:
                 step_y = int(temp_y * 0.05)
                 step_y = max(min(step_y, 5), -5)
-                #arduino.write(b"L\n")
+                
             
 
             # Only send if step changed
@@ -90,8 +90,6 @@ def ard():
             # else:
             #     arduino.write(b"H\n")
 
-            # else:
-            #     print("LEWQLELQLEWQLELWQLELWQELWQLEWQLEWLQELQWELQWLEWQL")
 
             # Draw tracking dot
             cv2.circle(frame, (avg_x, avg_y), 5, (0, 0, 255), -1)
