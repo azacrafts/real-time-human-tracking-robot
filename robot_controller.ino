@@ -14,8 +14,8 @@ void setup() {
   // Initialize the servos
   pinMode(laserPin, OUTPUT);    // Set pin 8 as output
   digitalWrite(laserPin, LOW);  // Turn laser OFF at start
-  servo1.attach(10);  // Servo 1 connected to pin 9
-  servo2.attach(9); // Servo 2 connected to pin 10
+  servo1.attach(10);  // X-axis servo
+  servo2.attach(9); // Y-axis servo
 
   // Start serial communication
   Serial.begin(9600);
